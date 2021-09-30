@@ -63,7 +63,7 @@ class MainLoop(MainLoopBase):
         self.has_validation_groundtruth = self.training_parameters['cv'] != 0
 
         # TODO set dataset and output folder
-        self.local_base_folder = '/SET/PATH/TO/DATASET'
+        self.base_dataset_folder = '/SET/PATH/TO/DATASET'
         self.base_output_folder = '/SET/PATH/TO/OUTPUT_FOLDER'
 
         self.local_network_parameters = dict(num_labels=self.num_labels,
@@ -94,7 +94,7 @@ class MainLoop(MainLoopBase):
                                              local_prediction_activation=self.network_parameters['local_activation'],
                                              spatial_prediction_activation=self.network_parameters['spatial_activation'])
 
-        self.dataset_parameters = dict(base_folder=self.local_base_folder,
+        self.dataset_parameters = dict(base_folder=self.base_dataset_folder,
                                        image_spacing=list(reversed(self.image_spacing)),
                                        cv=self.training_parameters['cv'],
                                        data_format=self.data_format,
@@ -374,7 +374,6 @@ def run():
     )
 
     dataset_parameters = dict(
-        setup_folder_to_use='setup',
         cached_datasource=False,
         input_gaussian_sigma=1.0,
         label_gaussian_sigma=1.0,

@@ -39,9 +39,9 @@ class Dataset(object):
                  displacement_field_sampling_factor=2,
                  image_folder=None,
                  setup_folder=None,
-                 image_filename_postfix='_image_small',
+                 image_filename_postfix='_0000',
                  image_filename_extension='.nii.gz',
-                 labels_filename_postfix='_label_small',
+                 labels_filename_postfix='',
                  labels_filename_extension='.nii.gz',
                  landmark_file_postfix='',
                  landmarks_file=None,
@@ -88,8 +88,8 @@ class Dataset(object):
         self.dim = 3
         self.cache_maxsize = cache_maxsize
 
-        self.image_base_folder = image_folder or os.path.join(self.base_folder, 'images')
-        self.label_base_folder = image_folder or os.path.join(self.base_folder, 'images')
+        self.image_base_folder = image_folder or os.path.join(self.base_folder, 'TrainingImg_small')
+        self.label_base_folder = image_folder or os.path.join(self.base_folder, 'TrainingMask_small')
         self.setup_base_folder = setup_folder or os.path.join(self.base_folder, 'setup')
         self.landmarks_file = landmarks_file or os.path.join(self.setup_base_folder, f'landmark{landmark_file_postfix}.csv')
         self.background_pixel_value = -1024

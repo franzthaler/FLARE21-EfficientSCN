@@ -28,7 +28,6 @@ class Dataset(object):
                  image_spacing,
                  base_folder,
                  cv,
-                 setup_folder_to_use,
                  cached_datasource,
                  cache_maxsize=8192,
                  input_gaussian_sigma=1.0,
@@ -38,9 +37,9 @@ class Dataset(object):
                  displacement_field_sampling_factor=2,
                  image_folder=None,
                  setup_folder=None,
-                 image_filename_postfix='_image',
+                 image_filename_postfix='_0000',
                  image_filename_extension='.nii.gz',
-                 labels_filename_postfix='_label',
+                 labels_filename_postfix='',
                  labels_filename_extension='.nii.gz',
                  landmarks_file=None,
                  valid_output_sizes_x=None,
@@ -87,9 +86,9 @@ class Dataset(object):
         self.dim = 3
         self.cache_maxsize = cache_maxsize
 
-        self.image_base_folder = image_folder or os.path.join(self.base_folder, 'images')
-        self.label_base_folder = image_folder or os.path.join(self.base_folder, 'images')
-        self.setup_base_folder = setup_folder or os.path.join(self.base_folder, setup_folder_to_use)
+        self.image_base_folder = image_folder or os.path.join(self.base_folder, 'TrainingImg')
+        self.label_base_folder = image_folder or os.path.join(self.base_folder, 'TrainingMask')
+        self.setup_base_folder = setup_folder or os.path.join(self.base_folder, 'setup')
 
         self.valid_output_sizes_x = valid_output_sizes_x or [32, 64, 96, 128, 160]
         self.valid_output_sizes_y = valid_output_sizes_y or [32, 64, 96, 128]

@@ -98,9 +98,9 @@ RUN python3 -m pip install --no-cache-dir SimpleITK==2.0
 RUN python3 -m pip install --no-cache-dir tf-nightly-gpu
 
 WORKDIR /workspace
-COPY ./predict.sh  /workspace
-COPY ./inference_docker.py  /workspace
-COPY saved_models  /workspace/saved_models
+COPY docker/predict.sh  /workspace
+COPY docker/inference_docker.py  /workspace
+COPY submitted_saved_models  /workspace/saved_models
 
 CMD ["bash", "predict.sh"]
 

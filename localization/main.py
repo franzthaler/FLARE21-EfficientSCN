@@ -62,7 +62,7 @@ class MainLoop(MainLoopBase):
         self.has_validation_groundtruth = cv != 0
 
         # TODO set dataset and output folder
-        self.local_base_folder = '/SET/PATH/TO/DATASET'
+        self.base_dataset_folder = '/SET/PATH/TO/DATASET'
         self.base_output_folder = '/SET/PATH/TO/OUTPUT_FOLDER'
 
         self.num_labels = 2
@@ -78,7 +78,7 @@ class MainLoop(MainLoopBase):
                                        data_format=self.data_format,
                                        **network_parameters)
 
-        self.dataset_parameters = dict(base_folder=self.local_base_folder,
+        self.dataset_parameters = dict(base_folder=self.base_dataset_folder,
                                        valid_output_sizes=self.valid_output_sizes,
                                        image_spacing=list(reversed(self.image_spacing)),
                                        cv=self.cv,

@@ -51,9 +51,9 @@ class MainLoop(MainLoopBase):
 
         self.has_validation_groundtruth = self.training_parameters['cv'] != 0
 
-        # FLARE21
-        self.local_base_folder = '/media0/franz/datasets/multi_organ/flare21'
-        self.base_output_folder = '/media0/franz/experiments/semi_supervised_learning/flare21'
+        # TODO set dataset and output folder
+        self.base_dataset_folder = '/SET/PATH/TO/DATASET'
+        self.base_output_folder = '/SET/PATH/TO/OUTPUT_FOLDER'
 
         self.local_network_parameters = dict(num_labels=self.num_labels,
                                              padding=self.padding,
