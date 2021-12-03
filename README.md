@@ -1,5 +1,5 @@
 # Efficient Multi-Organ Segmentation Using SpatialConfiguartion-Net with Low GPU Memory Requirements
-Our implementation used for the [MICCAI 2021 FLARE Challenge](https://flare.grand-challenge.org/) titled [Efficient Multi-Organ Segmentation Using SpatialConfiguartion-Net with Low GPU Memory Requirements](https://grand-challenge-public-prod.s3.amazonaws.com/evaluation-supplementary/599/a13f0005-14a9-486c-a5f2-e308ccae56dc/FLARE21-EfficientSCN.pdf).
+Our implementation used for the [MICCAI 2021 FLARE Challenge](https://flare.grand-challenge.org/) titled [Efficient Multi-Organ Segmentation Using SpatialConfiguartion-Net with Low GPU Memory Requirements](http://arxiv.org/abs/2111.13630).
 
 You need to have the [MedicalDataAugmentationTool](https://github.com/christianpayer/MedicalDataAugmentationTool) framework by [Christian Payer](https://github.com/christianpayer) downloaded and in your PYTHONPATH for the scripts to work.
 
